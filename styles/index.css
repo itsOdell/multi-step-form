@@ -1,0 +1,440 @@
+@font-face {
+  font-family: Ubuntu;
+  font-weight: 400;
+  src: url("../assets/fonts/Ubuntu-Regular.ttf");
+}
+@font-face {
+  font-family: Ubuntu;
+  font-weight: 500;
+  src: url("../assets/fonts/Ubuntu-Medium.ttf");
+}
+@font-face {
+  font-family: Ubuntu;
+  font-weight: 700;
+  src: url("../assets/fonts/Ubuntu-Bold.ttf");
+}
+
+:root {
+  --marine-blue: hsl(213, 96%, 18%);
+  --purplish-blue: hsl(243, 100%, 62%);
+  --pastel-blue: hsl(228, 100%, 84%);
+  --light-blue: hsl(206, 94%, 87%);
+  --strawberry-red: hsl(354, 84%, 57%);
+  --cool-gray: hsl(231, 11%, 63%);
+  --light-gray: hsl(229, 24%, 87%);
+  --magnolia: hsl(217, 100%, 97%);
+  --albaster: hsl(231, 100%, 99%);
+  --white: hsl(0, 0%, 100%);
+  --mobile-width: 375px;
+  --dekstop-width: 1440px;
+  --paragraph-size: 16px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Ubuntu;
+  font-size: var(--paragraph-size);
+  background-color: var(--magnolia);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+main {
+  background-color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+#nav {
+  width: 275px;
+  height: 570px;
+  background: url("../assets/images/bg-sidebar-desktop.svg") no-repeat;
+  color: var(--albaster);
+}
+
+#nav > ul {
+  list-style: none;
+  padding-left: 25px;
+  padding-top: 33px;
+}
+
+#nav > ul .step {
+  display: flex;
+  margin-bottom: 30px;
+  align-items: center;
+  cursor: pointer;
+}
+
+#nav > ul .step .step-number {
+  width: 37px;
+  height: 37px;
+  border-radius: 50%;
+  border: 1.6px solid var(--albaster);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  margin-right: 15px;
+}
+
+#nav > ul .step .step-info {
+  display: flex;
+  flex-direction: column;
+}
+
+#nav > ul .step .step-info .step-info-number {
+  color: var(--light-gray);
+  font-weight: 400;
+  font-size: 13px;
+  margin-bottom: 3px;
+}
+
+#nav > ul .step .step-info .step-info-text {
+  letter-spacing: 0.5px;
+}
+
+#content {
+  width: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#content .container {
+  width: 630px;
+}
+
+#content #step-1 header h1,
+#content #step-2 header h1,
+#step-3 header h1,
+#step-4 header h1 {
+  color: var(--marine-blue);
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+#content #step-1 header p,
+#content #step-2 header p,
+#step-3 header p,
+#step-4 header p {
+  color: var(--cool-gray);
+  font-size: 18px;
+  margin-bottom: 2.5rem;
+}
+
+#content #step-1 form .input-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+#content #step-2 header {
+  margin-top: 4px;
+}
+
+#content #step-2 .option-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#step-2 .option {
+  transition: all 0.3s ease;
+  height: 209px;
+  padding: 15px;
+  width: 195px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1.6px solid var(--light-gray);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#step-2 .option:hover,
+#step-3 .add-on:hover {
+  cursor: pointer;
+  border: 1.6px solid var(--purplish-blue);
+}
+
+#step-2 .option img {
+  width: 60px;
+  height: 60px;
+}
+
+#step-2 .option .option-text {
+  display: flex;
+  flex-direction: column;
+}
+
+#step-2 .option .option-text strong {
+  font-size: 24px;
+  color: var(--marine-blue);
+  margin-bottom: 4px;
+}
+
+#step-2 .option .option-text span {
+  color: var(--cool-gray);
+}
+#step-2 .option .option-text .option-text-misc {
+  margin-top: 4px;
+  font-size: 15px;
+  color: var(--marine-blue);
+  font-weight: 400;
+}
+#step-2 .switch-container {
+  margin-top: 2rem;
+  width: 100%;
+  background-color: var(--albaster);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0;
+  margin-bottom: 0.9rem;
+}
+
+#step-2 .switch-container div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#step-2 .switch-container .monthly,
+.yearly {
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--cool-gray);
+}
+
+#step-2 .switch-container .switch {
+  transition: all 0.3s ease;
+  cursor: pointer;
+  width: 45px;
+  height: 25px;
+  padding: 5px;
+  margin: 0 20px;
+  border-radius: 120px;
+  background-color: var(--marine-blue);
+  position: relative;
+}
+
+#step-2 .switch-container .ball {
+  transition: all 0.3s ease;
+  background-color: var(--white);
+  height: 15px;
+  width: 15px;
+  position: absolute;
+  left: 5px;
+  border-radius: 100%;
+}
+
+#step-3 header {
+  margin-top: 6px;
+}
+
+#step-3 .add-ons-container form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+#step-3 .add-on {
+  height: 84px;
+  transition: all 0.3s ease;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border: 1.6px solid var(--light-gray);
+  border-radius: 10px;
+  padding: 15px 24px;
+}
+
+#step-3 .add-on .add-on-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#step-3 .add-on strong {
+  color: var(--marine-blue);
+  /* margin-bottom: 15px; */
+  font-size: 20px;
+  font-weight: 500;
+}
+
+#step-3 .add-on span {
+  color: var(--purplish-blue);
+  font-weight: 500;
+}
+
+#step-3 .add-on p {
+  margin-top: 3px;
+  font-size: var(--paragraph-size);
+  color: var(--cool-gray);
+}
+
+#step-3 button {
+  margin-top: 4.8rem;
+}
+
+#step-3 input[type="checkbox"] {
+  margin-right: 20px;
+  width: 23px;
+  height: 23px;
+  border-radius: 10px;
+  padding: 15px;
+  accent-color: var(--purplish-blue);
+}
+
+#step-4 .step-4-content {
+  background-color: var(--magnolia);
+  padding: 20px;
+  border-radius: 15px;
+}
+
+#step-4 .step-4-content .upper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#step-4 .step-4-content .upper .upper-text {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+#step-4 .upper .upper-text p,
+.upper-text-price {
+  color: var(--marine-blue);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+#step-4 .total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+#step-4 .total span {
+  color: var(--cool-gray);
+  font-size: 17px;
+}
+
+#step-4 .total h2 {
+  color: var(--purplish-blue);
+}
+
+#step-4 button.next {
+  background-color: var(--purplish-blue);
+}
+
+label {
+  color: var(--marine-blue);
+  font-size: 15px;
+  font-weight: 400;
+}
+
+input {
+  outline: none;
+  font-size: var(--paragraph-size);
+  border: 1.6px solid var(--light-gray);
+  font-weight: 500 !important;
+  border-radius: 5px;
+  padding: 13px;
+  font-weight: 500;
+}
+
+input:focus {
+  border: 1.6px solid var(--purplish-blue) !important;
+}
+
+button.next {
+  transition: all 0.3s ease;
+  cursor: pointer;
+  margin-top: 3.5rem;
+  background-color: var(--marine-blue);
+  color: var(--white);
+  border: none;
+  border-radius: 5px;
+  font-size: var(--paragraph-size);
+  padding: 13px 20px;
+  font-weight: 500;
+  float: right;
+}
+
+button.back {
+  transition: all 0.3s ease;
+  cursor: pointer;
+  margin-top: 3.5rem;
+  color: var(--cool-gray);
+  background-color: transparent;
+  font-weight: 700 !important;
+  border: none;
+  border-radius: 5px;
+  font-size: var(--paragraph-size);
+  padding: 13px 20px;
+  font-weight: 500;
+  float: left;
+}
+
+button.next:hover {
+  background-color: var(--purplish-blue);
+}
+
+button.back:hover {
+  color: var(--marine-blue);
+}
+
+.step-number-active {
+  background-color: var(--light-blue);
+  border: 1.6px solid var(--light-blue) !important;
+  color: black;
+}
+
+.input-error {
+  border: 1.6px solid crimson !important;
+}
+
+.hidden {
+  display: none;
+}
+
+.active-switch {
+  color: var(--marine-blue) !important;
+}
+
+.invalid-error {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--strawberry-red);
+  float: right;
+}
+
+.card-selected {
+  background-color: var(--albaster) !important;
+  border: 1.6px solid var(--purplish-blue) !important;
+}
+
+.ball-yearly {
+  left: 25px !important;
+}

@@ -1,0 +1,7 @@
+- Make PWA
+- Use module bundlers
+- In-depth video on favicons
+- babel for transpiling
+- use css preprocessors (sass)
+- accessibility
+- use picture element
